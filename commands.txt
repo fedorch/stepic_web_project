@@ -1,0 +1,4 @@
+﻿rm -f .bash* .profile
+git clone https://github.com/fedorch/stepic_web_project.git /home/box
+git pull
+bash init.sh
