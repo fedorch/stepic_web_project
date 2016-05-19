@@ -18,6 +18,7 @@ from django.contrib import admin
 
 from ask.views import found, not_found
 
+h = bytes("dfdf", encoding="utf8")
 urlpatterns = [
 
     url(r'^$', found),
