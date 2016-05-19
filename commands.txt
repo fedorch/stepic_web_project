@@ -5,12 +5,19 @@ bash init.sh
 
 sudo apt-get update
 sudo apt-get install mc
+sudo apt-get install mysql-server
+
+sudo /etc/init.d/mysql start
 
 curl "http://127.0.0.1:8080/?a=1&a=2&b=3"
 curl http://127.0.0.1/hello/?a=bcd
 
-python manage.py runserver 0.0.0.0:8000
 sudo pip3 install django
+
+django-admin startproject ask
+cd ask
+manage.py startapp qa
+
 python3 manage.py runserver 0.0.0.0:8000
 
 Файл:
@@ -28,3 +35,11 @@ sudo pip3 install gunicorn==17.5
 
 curl http://127.0.0.1/ask/
 curl http://127.0.0.1/question/123/
+
+mysql -uroot -e "CREATE DATABASE djbase;"
+mysql -uroot -e "CREATE USER 'django@localhost' IDENTIFIED BY 'pass123';"
+mysql -uroot -e "GRANT ALL ON dj.* TO 'django@localhost';"
+mysql -uroot -e "GRANT USAGE ON *.* TO 'django@localhost';"
+mysql -uroot -e "FLUSH PRIVILEGES;"
+
+manage.py syncdb
