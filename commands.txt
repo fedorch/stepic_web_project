@@ -6,5 +6,5 @@ bash init.sh
 sudo apt-get update
 sudo apt-get install mc
 
-curl http://127.0.0.1:8080/?a=bcd
+curl "http://127.0.0.1:8080/?a=1&a=2&b=3"
 curl http://127.0.0.1/hello/?a=bcd

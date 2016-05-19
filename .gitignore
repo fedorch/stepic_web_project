@@ -1,1 +1,7 @@
 secret.txt
+
+__pycache__/
+.idea/
+
+*.py[cod]
+*.sqlite3
