@@ -8,3 +8,7 @@ sudo apt-get install mc
 
 curl "http://127.0.0.1:8080/?a=1&a=2&b=3"
 curl http://127.0.0.1/hello/?a=bcd
+
+python manage.py runserver 0.0.0.0:8000
+sudo pip3 install django
+python3 manage.py runserver 0.0.0.0:8000

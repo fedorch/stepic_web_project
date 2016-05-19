@@ -16,17 +16,17 @@ Including another URLconf
 from django.conf.urls import url, include
 from django.contrib import admin
 
-from ask.views import not_found
+from ask.views import found, not_found
 
 urlpatterns = [
 
-    url(r'^$', not_found),
+    url(r'^$', found),
 
-    url(r'^login/', not_found),
-    url(r'^signup/', not_found),
-    url(r'^ask/', not_found),
-    url(r'^popular/', not_found),
-    url(r'^new/', not_found),
+    url(r'^login/', found),
+    url(r'^signup/', found),
+    url(r'^ask/', found),
+    url(r'^popular/', found),
+    url(r'^new/', found),
 
     url(r'^admin/', admin.site.urls),
     url(r'^question/', include('qa.urls')),
