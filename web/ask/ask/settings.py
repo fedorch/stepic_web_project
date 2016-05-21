@@ -75,7 +75,7 @@ WSGI_APPLICATION = 'ask.wsgi.application'
 # Database
 # https://docs.djangoproject.com/en/1.9/ref/settings/#databases
 
-if os.name == "nt":
+if os.name == "nt" or True:
     DATABASES = {
         'default': {
             'ENGINE': 'django.db.backends.sqlite3',
