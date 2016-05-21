@@ -27,7 +27,7 @@ python3 manage.py runserver 0.0.0.0:8000
 на
 #! /usr/bin/python3
 
-sudo pip3 install gunicorn==17.5
+sudo pip3 install gunicorn
 
 /usr/bin/gunicorn
 /usr/bin/gunicorn_django
@@ -42,4 +42,4 @@ mysql -uroot -e "GRANT ALL ON dj.* TO 'django@localhost';"
 mysql -uroot -e "GRANT USAGE ON *.* TO 'django@localhost';"
 mysql -uroot -e "FLUSH PRIVILEGES;"
 
-manage.py syncdb
+sudo pip3 install MySQL-python

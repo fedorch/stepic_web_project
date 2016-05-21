@@ -16,17 +16,18 @@ Including another URLconf
 from django.conf.urls import url, include
 from django.contrib import admin
 
-from ask.views import found, not_found
+from ask.views import found, not_found, init25
+from qa.views import index, popular
 
-h = bytes("dfdf", encoding="utf8")
 urlpatterns = [
 
-    url(r'^$', found),
+    url(r'^$', index),
 
+    url(r'^init25/', init25),
     url(r'^login/', found),
     url(r'^signup/', found),
     url(r'^ask/', found),
-    url(r'^popular/', found),
+    url(r'^popular/', popular),
     url(r'^new/', found),
 
     url(r'^admin/', admin.site.urls),

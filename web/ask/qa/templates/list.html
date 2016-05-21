@@ -1,0 +1,13 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>{{ title }} questions</title>
+</head>
+<body>
+    <h1>{{ title }} questions</h1>
+    {% for question in questions %}
+        <p><a href="{{ question.get_url }}">{{ question }}</a></p>
+    {% endfor %}
+</body>
+</html>
