@@ -17,7 +17,7 @@ from django.conf.urls import url, include
 from django.contrib import admin
 
 from ask.views import found, not_found, init25
-from qa.views import index, popular
+from qa.views import index, popular, ask
 
 urlpatterns = [
 
@@ -26,7 +26,8 @@ urlpatterns = [
     url(r'^init25/', init25),
     url(r'^login/', found),
     url(r'^signup/', found),
-    url(r'^ask/', found),
+    url(r'^ask/', ask),
+    # url(r'^answer/', answer),
     url(r'^popular/', popular),
     url(r'^new/', found),
 

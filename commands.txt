@@ -29,9 +29,10 @@ python3 manage.py runserver 0.0.0.0:8000
 
 sudo pip3 install gunicorn
 
-/usr/bin/gunicorn
-/usr/bin/gunicorn_django
-/usr/bin/gunicorn_paster
+sudo nano /usr/sbin/gunicorn-debian
+sudo nano /usr/bin/gunicorn
+sudo nano /usr/bin/gunicorn_django
+sudo nano /usr/bin/gunicorn_paster
 
 curl http://127.0.0.1/ask/
 curl http://127.0.0.1/question/123/
