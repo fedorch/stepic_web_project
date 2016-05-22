@@ -7,7 +7,9 @@
 <body>
     <h1>{{ title }} questions</h1>
     {% for question in questions %}
-        <p><a href="{{ question.get_url }}">{{ question }}</a></p>
+        <p><a href="{{ question.get_url }}">{{ question }}, {{ question.author_id }}</a></p>
     {% endfor %}
+    <div>User: {{ user }}</div>
+    <div>Session: {{ session }}</div>
 </body>
 </html>

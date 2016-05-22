@@ -6,11 +6,11 @@
 </head>
 <body>
     <h1>{{ question }}</h1>
-    <div>{{ question.text }}</div>
+    <div>{{ question.text }}, {{ question.author_id }}</div>
     <hr>
     <ul>
     {% for answer in question.answer_set.all %}
-        <li>{{ answer }}</li>
+        <li>{{ answer }}, {{ answer.author_id }}</li>
     {% endfor %}
     </ul>
     <hr>
@@ -23,5 +23,8 @@
     </form>
     <hr>
     <div><a href="/ask/">Ask a new question</a></div>
+    <div>User: {{ user }}</div>
+    <div>Session: {{ session }}</div>
+    <div><a href="/">Return to main page</a></div>
 </body>
 </html>

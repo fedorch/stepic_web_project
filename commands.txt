@@ -44,3 +44,5 @@ mysql -uroot -e "GRANT USAGE ON *.* TO 'django@localhost';"
 mysql -uroot -e "FLUSH PRIVILEGES;"
 
 sudo pip3 install MySQL-python
+
+chmod -R a+rw .
